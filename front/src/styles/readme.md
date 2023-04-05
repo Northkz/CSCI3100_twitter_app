@@ -1,1 +1,1 @@
-this is the folder for aditional css files
+this is a folder for aditional css files
