@@ -13,9 +13,9 @@ export default function SideNavbar() {
         <div className='sidenav'>
             <ul className='navbar'>
                 <li>
-                    {/* <Link to="/"> */}
+                    <Link to="/">
                         <i className='icon' id='twitter'><BsTwitter /></i>
-                    {/* </Link> */}
+                    </Link>
                 </li>
                 <li>
                     {/* <NavLink to="/"> */}
