@@ -2,7 +2,7 @@ import React from "react";
 import { BiUserPlus, BiBlock } from "react-icons/bi";
 import { AiOutlineDelete } from "react-icons/ai";
 import { useDispatch } from "react-redux";
-import { deleteTweet } from "../../redux/asyncActions/TweetAsync";
+import { deleteTweet } from "../../ReactRedux/syncing/userTweet";
 const DropDown = ({ tweetId, user, tweet, target }) => {
   const dispatch = useDispatch();
   const deletePost = (id) => {

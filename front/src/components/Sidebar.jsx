@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
-import { showSidebar } from "../redux/slices/stateSlice";
+import { showSidebar } from "../ReactRedux/slices/stateSlice";
 import {RiTwitterFill, RiLogoutBoxLine} from "react-icons/ri";
 import {BiBell, BiBookmark, BiSearchAlt, BiHomeCircle} from "react-icons/bi";
 import {CgProfile} from "react-icons/cg"
 import {FiMail} from "react-icons/fi"
-import {checkAuthenticated, load_user, logoutAct} from "../redux/asyncActions/UserAsync";
-import {removeNotice} from "../redux/slices/NotificationSlice";
+import {checkAuthenticated, load_user, logoutAct} from "../ReactRedux/syncing/normalUser";
+import {removeNotice} from "../ReactRedux/slices/NotificationUser";
 import AlertMessage from "./Details/alertMessage";
 import TrendBar from "./TweetComponents/FollowRecs";
 

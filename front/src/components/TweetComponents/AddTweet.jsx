@@ -14,7 +14,7 @@ import {
 } from "react-icons/ai";
 //import { FaGlobeAfrica,FaLock } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
-import { addTweet } from "../../redux/asyncActions/TweetAsync";
+import { addTweet } from "../../ReactRedux/syncing/userTweet";
 import ClipLoader from "react-spinners/ClipLoader";
 
 const AddTweet = () => {

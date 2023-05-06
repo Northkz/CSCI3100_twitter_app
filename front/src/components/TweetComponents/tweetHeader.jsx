@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
-import { showSidebar } from "../../redux/slices/stateSlice";
+import { showSidebar } from "../../ReactRedux/slices/stateSlice";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 const TweetHeader = ({
   headerName,

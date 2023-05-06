@@ -3,7 +3,7 @@ import Message, { RoomResult } from "./Message";
 import "../styles/chat.css";
 import { useDispatch, useSelector } from "react-redux";
 import TweetHeader from "../components/TweetComponents/tweetHeader";
-import { getRooms } from "../redux/asyncActions/ChatAsync";
+import { getRooms } from "../ReactRedux/syncing/chatting";
 
 const ChatMessage = () => {
   const [query, setQuery] = useState("");

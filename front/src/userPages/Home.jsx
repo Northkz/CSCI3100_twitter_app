@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import HomeTweets from "../components/TweetComponents/HomeTweets";
-import { removeMesage } from "../redux/slices/tweetSlice";
+import { removeMesage } from "../ReactRedux/slices/tweetSlice";
 import AlertMessage from "../components/Details/alertMessage";
 import React from "react";
-import SearchInput from "../components/SearchInput";
-import SideTop from "../components/SideTop";
+import SearchInput from "../components/SearchBarInput";
+import SideTop from "../components/SidebarTop";
 
 const Home = () => {
   const userIn = useSelector((state) => state.userReducer);

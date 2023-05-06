@@ -6,7 +6,7 @@ import {
   getNotifications,
   loadMoreNotification,
   seenNotifications,
-} from "../redux/asyncActions/NotificationAsync";
+} from "../ReactRedux/syncing/userNotify";
 import { Link } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
 import {

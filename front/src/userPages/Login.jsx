@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import useForm from "../hooks/useForm";
+import useForm from "../hookReact/formHooks";
 import { useDispatch, useSelector } from "react-redux";
-import { login } from "../redux/asyncActions/UserAsync";
+import { login } from "../ReactRedux/syncing/normalUser";
 import { useHistory } from "react-router-dom";
 import { RiTwitterFill, RiEye2Fill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
 import { BiError, BiShow } from "react-icons/bi";
-import { WarningText } from "../iconStyle/Common";
+import { WarningText } from "../iconStyle/comStyle";
 const Login = () => {
   const user = useSelector((state) => state.userReducer);
   const { isAuthenticated } = user;

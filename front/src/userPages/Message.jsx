@@ -3,10 +3,10 @@ import Sidebar from "../components/Sidebar";
 import TweetHeader from "../components/TweetComponents/tweetHeader";
 import "../styles/chat.css";
 import { Link,useHistory} from "react-router-dom";
-import { getRooms } from "../redux/asyncActions/ChatAsync";
+import { getRooms } from "../ReactRedux/syncing/chatting";
 import { useDispatch, useSelector } from "react-redux";
 import ClipLoader from "react-spinners/ClipLoader";
-import { setMsgNoti } from "../redux/slices/NotificationSlice";
+import { setMsgNoti } from "../ReactRedux/slices/NotificationUser";
 
 const Message = (props) => {
   const [query, setQuery] = useState("");

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { userFollow, userProfile } from "../redux/asyncActions/UserAsync";
+import { userFollow, userProfile } from "../ReactRedux/syncing/normalUser";
 import { useDispatch, useSelector } from "react-redux";
 import Second from "../components/Second";
 import Moment from "moment";
-import useUserInfo from "../hooks/useUserInfo";
+import useUserInfo from "../hookReact/userHook";
 import { AiOutlineSchedule } from "react-icons/ai";
 import { BiSend } from "react-icons/bi";
 import { Link ,useHistory} from "react-router-dom";
@@ -11,11 +11,11 @@ import { useParams } from "react-router-dom";
 import TweetHeader from "../components/TweetComponents/tweetHeader";
 import Viewer from "react-viewer";
 import ClipLoader from "react-spinners/ClipLoader";
-import { tweet_specific_user } from "../redux/asyncActions/TweetAsync";
+import { tweet_specific_user } from "../ReactRedux/syncing/userTweet";
 import TweetPostCard from "../components/TweetComponents/TweetPostCard";
-import { removeMesage } from "../redux/slices/tweetSlice";
+import { removeMesage } from "../ReactRedux/slices/tweetSlice";
 import AlertMessage from "../components/Details/alertMessage";
-import UserEditModal from "../components/UserRelated/UserEditModal";
+import UserEditModal from "../components/userRec/UserEditModal";
 import { FollowInfo } from "../components/Details/FollowInfo";
 
 const Profile = () => {

@@ -2,8 +2,8 @@ import React ,{useEffect}from "react";
 import Second from "../components/Second";
 import TweetHeader from "../components/TweetComponents/tweetHeader";
 import { useSelector, useDispatch } from "react-redux";
-import RecommendUser from "../components/UserRelated/RecommendUser";
-import { followUserList, load_more_user } from "../redux/asyncActions/UserAsync";
+import RecommendUser from "../components/userRec/RecommendUser";
+import { followUserList, load_more_user } from "../ReactRedux/syncing/normalUser";
 
 const FollowUser = () => {
     const dispatch = useDispatch();

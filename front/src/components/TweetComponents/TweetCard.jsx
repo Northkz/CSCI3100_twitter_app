@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "emoji-mart/css/emoji-mart.css";
 import { useSelector, useDispatch } from "react-redux";
-import { load_tweet } from "../../redux/asyncActions/TweetAsync";
+import { load_tweet } from "../../ReactRedux/syncing/userTweet";
 import ClipLoader from "react-spinners/ClipLoader";
 import { Link } from "react-router-dom";
 import TweetPostCard from "./TweetPostCard";

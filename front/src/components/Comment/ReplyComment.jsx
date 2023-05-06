@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { BiCaretUp, BiCaretRight, BiCaretDown } from "react-icons/bi";
 import Moment from "moment";
-import { TweetOperation } from "../TweetOperation";
+import { TweetOperation } from "../TweetActions";
 import { DropdownContent } from "./DropDownContent";
 import { FiMoreHorizontal } from "react-icons/fi";
-import { editComment, likeComment } from "../../redux/asyncActions/CommentAsync";
+import { editComment, likeComment } from "../../ReactRedux/syncing/userComment";
 import { EditPost } from "../EditPost";
 
 const ReplyComment = ({ childCom, parentCom, tweetId, user, setCurIndex }) => {

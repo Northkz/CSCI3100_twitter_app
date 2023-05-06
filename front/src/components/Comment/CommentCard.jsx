@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { TweetOperation } from "../TweetOperation";
+import { TweetOperation } from "../TweetActions";
 import { FiMoreHorizontal } from "react-icons/fi";
 
 import { useDispatch } from "react-redux";
@@ -8,7 +8,7 @@ import { BiCaretUp, BiCaretDown } from "react-icons/bi";
 import {
   editComment,
   likeComment,
-} from "../../redux/asyncActions/CommentAsync";
+} from "../../ReactRedux/syncing/userComment";
 import Moment from "moment";
 import ReplyComment from "./ReplyComment";
 import { EditPost } from "../EditPost";

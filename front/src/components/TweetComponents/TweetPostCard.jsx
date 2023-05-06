@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FiMoreHorizontal } from "react-icons/fi";
 import DropDown from "./DropDown";
-import { TweetOperation } from "../TweetOperation";
+import { TweetOperation } from "../TweetActions";
 import Moment from "moment";
-import { likeTweet } from "../../redux/asyncActions/TweetAsync";
+import { likeTweet } from "../../ReactRedux/syncing/userTweet";
 import { BiGlobe } from "react-icons/bi";
 import { FaLock } from "react-icons/fa";
 

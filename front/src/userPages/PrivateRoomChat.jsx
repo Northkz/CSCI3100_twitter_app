@@ -8,12 +8,12 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   getChatMessage,
   loadMoreMessage,
-} from "../redux/asyncActions/ChatAsync";
-import { addMsg } from "../redux/slices/ChatSlice";
+} from "../ReactRedux/syncing/chatting";
+import { addMsg } from "../ReactRedux/slices/chatUser";
 import ReconnectingWebSocket from "reconnecting-websocket";
 import AddPicker from "../components/Details/AddPicker";
 import { Link } from "react-router-dom";
-import { setMsgNoti } from "../redux/slices/NotificationSlice";
+import { setMsgNoti } from "../ReactRedux/slices/NotificationUser";
 const PrivateRoomChat = () => {
   const [msgInput, setMsgInput] = useState("");
   const [istyping, setIstyping] = useState(null);

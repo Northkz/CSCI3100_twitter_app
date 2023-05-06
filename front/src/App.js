@@ -8,18 +8,18 @@ import Activate from "./userPages/Activate";
 import AdminRedirect from "./userPages/AdminRedirect";
 import Profile from "./userPages/Profile";
 import TweetDetail from "./userPages/TweetDetail";
-import NotFound from "./components/NotFound";
-import { load_user, recommendMeUser } from "./redux/asyncActions/UserAsync";
+import NotFound from "./components/PageNotFound";
+import { load_user, recommendMeUser } from "./ReactRedux/syncing/normalUser";
 import { useDispatch, useSelector } from "react-redux";
-import BookmarkList from "./userPages/BookmarkList";
+import BookmarkList from "./userPages/userBookmark";
 import ReconnectingWebSocket from "reconnecting-websocket";
 import Notifications from "./userPages/Notifications";
-import { removeNotice, tweetNotice } from "./redux/slices/NotificationSlice";
+import { removeNotice, tweetNotice } from "./ReactRedux/slices/NotificationUser";
 import Explore from "./userPages/Explore";
 import ChatMessage from "./userPages/ChatMessage";
 import PrivateRoomChat from "./userPages/PrivateRoomChat";
 import FollowUser from "./userPages/FollowUser";
-import { getNotifications } from "./redux/asyncActions/NotificationAsync";
+import { getNotifications } from "./ReactRedux/syncing/userNotify";
 
 function App() {
   const userIn = useSelector((state) => state.userReducer);

@@ -6,7 +6,7 @@ import {
 } from "react-icons/bi";
 import {
   delComment,
-} from "../../redux/asyncActions/CommentAsync";
+} from "../../ReactRedux/syncing/userComment";
 
 export const DropdownContent = ({ user, comment, setEdit, setCurIndex, dispatch }) => {
     return (

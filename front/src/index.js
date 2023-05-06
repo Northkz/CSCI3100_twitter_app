@@ -6,7 +6,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import axios from "axios";
 import { Provider } from "react-redux";
-import store from "./redux/store";
+import store from "./ReactRedux/store";
 const baseURL = process.env.REACT_APP_DOMAIN
 
 

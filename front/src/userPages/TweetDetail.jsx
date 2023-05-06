@@ -5,7 +5,7 @@ import {
   tweet_detail,
   deleteTweet,
   likeTweet,
-} from "../redux/asyncActions/TweetAsync";
+} from "../ReactRedux/syncing/userTweet";
 
 import Second from "../components/Second";
 import TweetHeader from "../components/TweetComponents/tweetHeader";
@@ -13,16 +13,16 @@ import { Link, useHistory } from "react-router-dom";
 import { FiMoreHorizontal } from "react-icons/fi";
 import { AiOutlineDelete } from "react-icons/ai";
 import { BiUserPlus, BiEditAlt, BiBlock } from "react-icons/bi";
-import { removeMesage } from "../redux/slices/tweetSlice";
+import { removeMesage } from "../ReactRedux/slices/tweetSlice";
 import AlertMessage from "../components/Details/alertMessage";
-import { TweetOperation } from "../components/TweetOperation";
+import { TweetOperation } from "../components/TweetActions";
 import { TweetContent } from "../components/TweetComponents/TweetContent";
 import CommentCard from "../components/Comment/CommentCard";
 import {
   addComment,
   load_more_comment,
   tweet_comments,
-} from "../redux/asyncActions/CommentAsync";
+} from "../ReactRedux/syncing/userComment";
 import ClipLoader from "react-spinners/ClipLoader";
 import AddPicker from "../components/Details/AddPicker";
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AiFillUnlock } from "react-icons/ai";
 import { BiGlobe } from "react-icons/bi";
-import { editTweet } from "../../redux/asyncActions/TweetAsync";
+import { editTweet } from "../../ReactRedux/syncing/userTweet";
 import Viewer from "react-viewer";
 import {FaLock } from "react-icons/fa";
 import Moment from 'moment';

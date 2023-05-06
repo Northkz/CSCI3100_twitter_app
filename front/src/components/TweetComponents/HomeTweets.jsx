@@ -5,8 +5,8 @@ import TweetCard from "./TweetCard";
 import TweetHeader from "./tweetHeader";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { load_more } from "../../redux/asyncActions/TweetAsync";
-import { setSearch } from "../../redux/slices/NotificationSlice";
+import { load_more } from "../../ReactRedux/syncing/userTweet";
+import { setSearch } from "../../ReactRedux/slices/NotificationUser";
 const HomeTweets = () => {
   const history = useHistory();
   const dispatch = useDispatch();

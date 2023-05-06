@@ -2,12 +2,12 @@ import React, { useEffect } from "react";
 import Second from "../components/Second";
 import { useDispatch, useSelector } from "react-redux";
 import "../styles/explore.css";
-import SearchInput from "../components/SearchInput";
+import SearchInput from "../components/SearchBarInput";
 import ClipLoader from "react-spinners/ClipLoader";
 import TweetPostCard from "../components/TweetComponents/TweetPostCard";
-import { explore_tweet, load_more } from "../redux/asyncActions/TweetAsync";
-import { setSearch } from "../redux/slices/NotificationSlice";
-import { showSearchBar } from "../redux/slices/tweetSlice";
+import { explore_tweet, load_more } from "../ReactRedux/syncing/userTweet";
+import { setSearch } from "../ReactRedux/slices/NotificationUser";
+import { showSearchBar } from "../ReactRedux/slices/tweetSlice";
 
 
 const Explore = () => {

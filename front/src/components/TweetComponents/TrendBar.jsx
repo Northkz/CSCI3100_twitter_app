@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SearchInput from "../SearchInput";
-import SideTop from "../SideTop";
+import SearchInput from "../SearchBarInput";
+import SideTop from "../SidebarTop";
 import { useSelector } from "react-redux";
-import RecommendUser from "../UserRelated/RecommendUser";
+import RecommendUser from "../userRec/RecommendUser";
 const TrendBar = () => {
   const userIn = useSelector((state) => state.userReducer);
   const isAuthenticated = userIn.isAuthenticated;

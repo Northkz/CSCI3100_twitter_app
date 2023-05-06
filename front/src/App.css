@@ -32,7 +32,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 1600px;
+  max-width: 2000px;
   scroll-behavior: smooth;
 }
 
@@ -474,7 +474,7 @@ body {
   position: absolute;
   z-index: 10;
   border-radius: 5px;
-  background: linear-gradient(45deg, #131d27, #16222e);
+  background: linear-gradient(45deg, #bb748a);
   box-shadow: 5px -5px 10px #080d11, -5px 5px 10px #223345;
   padding-top: 10px;
   right: 10px;

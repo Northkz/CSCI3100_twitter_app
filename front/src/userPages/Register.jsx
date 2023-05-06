@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
-import useForm from "../hooks/useForm";
+import useForm from "../hookReact/formHooks";
 import { useDispatch, useSelector } from "react-redux";
-import { register } from "../redux/asyncActions/UserAsync";
+import { register } from "../ReactRedux/syncing/normalUser";
 import { useHistory } from "react-router-dom";
 import { RiTwitterFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
-import { WarningText } from "../iconStyle/Common";
+import { WarningText } from "../iconStyle/comStyle";
 import AlertMessage from "../components/Details/alertMessage";
-import { removeMesage } from "../redux/slices/userSlice";
+import { removeMesage } from "../ReactRedux/slices/userSlice";
 
 const Register = () => {
   const [values, handleChange, disabled] = useForm();
