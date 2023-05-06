@@ -23,10 +23,17 @@ pip install -r requirements.txt
 ```bash
 npm install
 ```
-4. cd back
-5. python manage.py runserver
-6. cd front
-7. npm start
+4. Start the backend server
+```bash
+cd back
+python manage.py runserver
+```
+5. Start the frontend server
+```bash
+cd front
+npm start
+```
+
 
 
 
