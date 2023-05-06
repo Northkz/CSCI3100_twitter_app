@@ -23,12 +23,21 @@ pip install -r requirements.txt
 ```bash
 npm install
 ```
-4. Start the backend server
+4. Create your own .env file that includes:
+
+- SECRET_KEY= ***
+- email= ***
+- password= ***
+- cloud_name= ***
+- api_key= ***
+- api_secret= ***
+
+5. Start the backend server
 ```bash
 cd back
 python manage.py runserver
 ```
-5. Start the frontend server
+6. Start the frontend server
 ```bash
 cd front
 npm start
