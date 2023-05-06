@@ -15,17 +15,18 @@ The functions include but not limited to:
 ## Installing and starting the project
 
 1. Clone the project
-2. Install the required packages:
+2. Install the required packages on backend:
 ```bash
 pip install -r requirements.txt
 ```
+3. Install the required packages on frontend:
 ```bash
 npm install
 ```
-3. cd back
-4. python manage.py runserver
-5. cd front
-6. npm start
+4. cd back
+5. python manage.py runserver
+6. cd front
+7. npm start
 
 
 
