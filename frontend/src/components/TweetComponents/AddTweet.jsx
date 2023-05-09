@@ -12,6 +12,8 @@ import {
   AiOutlineCloseCircle,
   
 } from "react-icons/ai";
+import cloudinary from "cloudinary-video-player";
+import "cloudinary-video-player/dist/cld-video-player.min.css";
 //import { FaGlobeAfrica,FaLock } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { addTweet } from "../../ReactRedux/syncing/userTweet";

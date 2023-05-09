@@ -5,6 +5,56 @@ import { editTweet } from "../../ReactRedux/syncing/userTweet";
 import Viewer from "react-viewer";
 import {FaLock } from "react-icons/fa";
 import Moment from 'moment';
+import { useEffect, useRef } from 'react';
+
+
+const VideoPlayer = ({ tweet, setVisible, ...props }) => {
+  const videoRef = useRef();
+  const cloudinaryRef = useRef();
+  const playerRef = useRef();
+  useEffect(() => {
+    if(tweet && tweet.video != null){
+      // Store the Cloudinary window instance to a ref when the page renders
+    
+      if ( cloudinaryRef.current ) return;
+  
+      cloudinaryRef.current = window.cloudinary;
+  
+      playerRef.current = cloudinaryRef.current.videoPlayer(videoRef.current, {
+        cloud_name: "dyaylu9zv",
+        secure: true
+      });
+      }
+    }, []);
+
+    if (tweet && tweet.image != null && !(tweet.image.includes("mp4"))){
+      return (
+          <img
+          onClick={() => setVisible(true)}
+          alt="img"
+          src={tweet.image}
+          className="image"
+        />
+        )
+    } 
+    else if(tweet.image == null && tweet.video==null){
+      return <></>
+    }
+    return (
+      <div style={{ width: '100%', aspectRatio: `${props.width} / ${props.height}`}}>
+        <video
+          ref={videoRef}
+          className="cld-video-player cld-fluid"
+          controls
+          autoPlay
+          data-cld-public-id = {`https://res.cloudinary.com/dyaylu9zv/${tweet.video}`}
+          {...props}
+          quality="auto"
+        />
+      </div>
+    )
+}
+
 export const TweetContent = ({
   id,
   dispatch,
@@ -79,14 +129,7 @@ export const TweetContent = ({
           tweet.title
         )}
       </p>
-      {tweet.image && (
-        <img
-          onClick={() => setVisible(true)}
-          alt="img"
-          src={tweet.image}
-          className="image"
-        />
-      )}
+      <VideoPlayer tweet={tweet} setVisible= {setVisible}/>
       <Viewer
         visible={visible}
         onClose={() => {

@@ -7,6 +7,53 @@ import Moment from "moment";
 import { likeTweet } from "../../ReactRedux/syncing/userTweet";
 import { BiGlobe } from "react-icons/bi";
 import { FaLock } from "react-icons/fa";
+import { Cloudinary } from "cloudinary-core";
+import { useEffect, useRef } from 'react';
+import cloudinary from "cloudinary-video-player";
+import "cloudinary-video-player/dist/cld-video-player.min.css";
+const VideoPlayer = ({ tweet, ...props }) => {
+  const videoRef = useRef();
+  const cloudinaryRef = useRef();
+  const playerRef = useRef();
+  useEffect(() => {
+    if(tweet && tweet.video != null){
+      // Store the Cloudinary window instance to a ref when the page renders
+    
+      if ( cloudinaryRef.current ) return;
+  
+      cloudinaryRef.current = window.cloudinary;
+  
+      playerRef.current = cloudinaryRef.current.videoPlayer(videoRef.current, {
+        cloud_name: "dyaylu9zv",
+        secure: true
+      });
+
+      }
+    }, []);
+
+    if (tweet.image){
+      return (
+        <img alt="img" src={tweet?.image} className="image img" />
+      ) 
+    } 
+    else if(tweet.image == null && tweet.video == null){
+      return <></>
+    }
+    return (
+      <div style={{ width: '500px'}}>
+        <video
+          ref={videoRef}
+          className="cld-video-player cld-fluid"
+          controls
+          autoPlay
+          data-cld-public-id = {`https://res.cloudinary.com/dyaylu9zv/${tweet.video}`}
+          {...props}
+          quality="auto"
+        />
+      </div>
+    )
+}
+
 
 const TweetPostCard = ({ tweet, dispatch, user }) => {
   const likeTweetD = (id) => {
@@ -112,9 +159,9 @@ const TweetHasParentOrNot = ({ tweet }) => {
             <p className="mt-2">
               {tweet?.title} {tweet?.body}
             </p>
-            {tweet?.image && (
-              <img alt="img" src={tweet?.image} className="image img" />
-            )}
+            <VideoPlayer tweet={tweet}/>
+            
+            
           </div>
         </Link>
       </span>

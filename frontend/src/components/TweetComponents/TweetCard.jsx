@@ -5,6 +5,8 @@ import { load_tweet } from "../../ReactRedux/syncing/userTweet";
 import ClipLoader from "react-spinners/ClipLoader";
 import { Link } from "react-router-dom";
 import TweetPostCard from "./TweetPostCard";
+import cloudinary from "cloudinary-video-player";
+import "cloudinary-video-player/dist/cld-video-player.min.css";
 // import { recommendMeUser } from "../../redux/asyncActions/UserAsync";
 
 const TweetCard = () => {
